@@ -1,0 +1,127 @@
+// @import "../../variables";
+
+@keyframes bounceYellow {
+    0% {
+        transform: translate(400px, 400px);
+        opacity:0;
+    }
+    100% {
+        transform: translate(140px, 50px);
+        opacity:1;
+    }
+}
+
+@keyframes bounceBlue {
+    0% {
+        transform: translate(-400px, -400px);
+        opacity:0;
+    }
+    100% {
+        transform: translate(-140px, -50px);
+        opacity:1;
+    }
+}
+
+.hero {
+    background: #edf3de;
+    padding: 80px 20px 40px 20px;
+    position: relative;
+    overflow: hidden;
+
+    @media (#{$bp-larger-than-tablet})  {
+        padding: 120px 20px 155px 20px;
+    }
+}
+
+.hero__content {
+    max-width: 600px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.hero__title {
+    text-transform: uppercase;
+    font-size: 30px;
+    color: #009b68;
+    letter-spacing: 2px;
+    font-style: italic;
+    margin: 30px auto;
+    text-align: center;
+    line-height: 1;
+    font-weight: bold;
+    @media (#{$bp-larger-than-tablet})  {
+        font-size: 66px;
+    }
+}
+.button--hero {
+    background: $brand-green;
+    margin-bottom: 15px;
+    @include transition;
+    &:hover {
+        background: darken($brand-green, 10%);
+        @include transition;
+    }
+}
+.link--hero {
+    color: $brand-green;
+    font-weight: 600;
+}
+.hero__circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    @media (#{$bp-larger-than-tablet})  {
+        width: 300px;
+        height: 300px;
+    }
+    @media (#{$bp-larger-than-desktop})  {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+.hero__circle--blue {
+    background: #1890b9;
+    top: 0px;
+    left: -50px;
+    @media (#{$bp-larger-than-tablet})  {
+        top: 0;
+        left: 0;
+        animation: bounceBlue 1s cubic-bezier(0.35, 0.86, 0.65, 1.17) forwards;
+        &.isVisible {
+            animation: bounceBlue 1s cubic-bezier(0.35, 0.86, 0.65, 1.17) forwards;
+
+        }
+    }
+}
+.hero__circle--yellow {
+    background: #edc933;
+    bottom: -50px;
+    right: -50px;
+    @media (#{$bp-larger-than-tablet})  {
+        bottom: 0;
+        right: 0;
+        animation: bounceYellow 1s cubic-bezier(0.35, 0.86, 0.65, 1.17) forwards;
+        &.isVisible {
+            animation: bounceYellow 1s cubic-bezier(0.35, 0.86, 0.65, 1.17) forwards;
+        }
+    }
+}
+
+
+
+
+main {
+    max-width: 540px;
+}
+aside {
+    width: 100%;
+    margin-top: 20px;
+    @media (#{$bp-larger-than-tablet})  {
+        margin-top: 0;
+        width: 300px;
+    }
+}

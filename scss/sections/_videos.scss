@@ -1,0 +1,29 @@
+.videos {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    position: relative;
+    @media (#{$bp-larger-than-tablet}) {
+        margin-top: -90px;
+    }
+    @media (#{$bp-larger-than-desktop}) {
+        margin-top: -90px;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+}
+
+.videos__video {
+    position: relative;
+    max-width: 100%;
+}
+.videos__video iframe {
+    box-shadow: 0 0 50px rgba(0, 0, 0, 0.5);
+    width: 300px;
+    height: 168px;
+    @media (#{$bp-larger-than-tablet}) {
+        width: 560px;
+        height: 315px;
+    }
+}

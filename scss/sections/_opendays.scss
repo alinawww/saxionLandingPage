@@ -1,0 +1,96 @@
+.open-days {
+    border: solid 1px #d2d8d8;
+}
+.open-days__title {
+    margin: 30px 30px 18px 30px;
+    font-size: 24px;
+    color: #1f2b2c;
+}
+.open-days__item {
+    padding: 0 20px;
+    &:first-of-type {
+        .open-day {
+            border-top: solid 1px #d2d8d8;
+        }
+    }
+    &:last-child {
+        .open-day {
+            border-bottom: 0;
+        }
+    }
+    @media (#{$bp-larger-than-tablet}) {
+        padding: 0 30px;
+    }
+}
+
+.open-day {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    border-bottom: solid 1px #d2d8d8;
+    padding: 14px 0;
+}
+a.open-day__hotspot {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+}
+.open-day__date, .open-day__action {
+    width: 40px;
+}
+.open-day__location {
+    padding: 0 10px;
+    flex-grow: 1;
+}
+.open-day__month {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 11px;
+    letter-spacing: 1px;
+    color: #1f2b2c;
+}
+.open-day__day {
+    display: inline-block;
+    font-weight: bold;
+    color: #1f2b2c;
+}
+
+.open-day__city {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1f2b2c;
+}
+.open-day__time {
+    color: #6c7776;
+    font-size: 12px;
+}
+.open-day__action {
+    text-align: right;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.open-day__action .fa {
+    color: #009b68;
+}
+
+
+// Modal specific styles
+.modal {
+    .open-days__title {
+        margin-top: 50px;
+    }
+    .open-days__item {
+        padding: 0;
+        &:hover {
+            background: #f0f4f4;
+            @include transition;
+        }
+    }
+    .open-day {
+        padding: 14px 30px;
+    }
+}

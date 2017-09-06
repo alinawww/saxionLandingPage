@@ -1,0 +1,120 @@
+.nav-hamburger {
+    width: 60px;
+    text-align: center;
+    border-right: 1px solid #fff;
+    height: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    @include transition;
+    &:hover {
+        cursor: pointer;
+        background: darken($brand-green, 10%);
+        @include transition;
+    }
+}
+
+.nav-hamburger__bar {
+    width: 20px;
+    height: 2px;
+    background-color: #ecf0f1;
+    display: block;
+    margin: 2px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+}
+
+.nav-hamburger.isOpen .nav-hamburger__bar:nth-child(2){
+  opacity: 0;
+}
+
+.nav-hamburger.isOpen .nav-hamburger__bar:nth-child(1){
+  -webkit-transform: translateY(6px) rotate(45deg);
+  -ms-transform: translateY(6px) rotate(45deg);
+  -o-transform: translateY(6px) rotate(45deg);
+  transform: translateY(6px) rotate(45deg);
+}
+
+.nav-hamburger.isOpen .nav-hamburger__bar:nth-child(3){
+  -webkit-transform: translateY(-6px) rotate(-45deg);
+  -ms-transform: translateY(-6px) rotate(-45deg);
+  -o-transform: translateY(-6px) rotate(-45deg);
+  transform: translateY(-6px) rotate(-45deg);
+}
+
+.navigation {
+    position: fixed;
+    top: 60px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    z-index: 9999;
+    background: #1f2b2c;
+    margin-bottom: 0;
+    padding: 30px;
+    transform: translateX(-435px);
+    @include transition;
+    &.isOpen {
+        transform: translateX(0);
+        @include transition;
+    }
+    @media (#{$bp-larger-than-tablet})  {
+        padding: 60px 80px;
+        width: 435px;
+    }
+}
+
+
+.navigation-items {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.navigation-items__item {
+    margin-bottom: 0px;
+}
+
+.navigation__link {
+    color: white;
+    font-size: 16px;
+    letter-spacing: 0.7px;
+    font-weight: 600;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 0;
+    text-decoration: none;
+    @include transition;
+    &:hover {
+        @include transition;
+        color: white;
+        text-decoration: underline;
+    }
+}
+.navigation__arrow {
+    width: 22px;
+    height: 22px;
+    background: url('../images/arrow-white.svg') #009b68 center;
+    display: inline-block;
+    background-size: 13px;
+    border-radius: 3px;
+    background-repeat: no-repeat;
+}
+.navigation-overlay {
+    position: fixed;
+    top: 60px;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(0,0,0,.5);
+    pointer-events: none;
+    transition: opacity 200ms;
+    opacity: 0;
+    z-index: 1;
+    transform: translateX(-100%);
+    &.isOpen {
+        pointer-events: auto;
+        opacity: 1;
+        transform: translateX(0);
+    }
+}

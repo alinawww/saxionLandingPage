@@ -1,0 +1,21 @@
+.content-section {
+    padding: 0 20px;
+    @media (#{$bp-larger-than-tablet}) {
+        padding: 0;
+        max-width: 960px;
+        margin: 0 auto;
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+.content__title {
+    font-weight: bold;
+    color: $brand-green;
+    margin-bottom: 10px;
+    font-size: 20px;
+    @media (#{$bp-larger-than-tablet}) {
+        margin-bottom: 30px;
+        font-size: 46px;
+    }
+}
