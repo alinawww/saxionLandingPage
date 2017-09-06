@@ -1,3 +1,4 @@
+
 # [Skeleton-Sass](http://getskeleton.com)
 
 Skeleton-Sass is the (un)official Sass version of [Dave Gamache's](https://twitter.com/dhg) Skeleton Framework. It currently featues a stable version of Skeleton 2.0.4
@@ -80,5 +81,4 @@ Skeleton-Sass was created by [Seth Coelen](http://sethcoelen.com) for a better S
 
 <a href='https://ko-fi.com?i=2446A87JJ08CZ' target='_blank'>
 <img style='border:0px;width:100px;' src='https://az743702.vo.msecnd.net/cdn/btn1.png' border='0' alt='Buy me a coffee at ko-fi.com' />
-</a> 
-
+</a>
