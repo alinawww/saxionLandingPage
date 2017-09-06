@@ -1,6 +1,7 @@
-## Saxion Landing page - based on the Skeleton-Sass Framework
+# Saxion Landing page
+### - based on the Skeleton-Sass Framework
 
-# [Skeleton-Sass](http://getskeleton.com)
+## [Skeleton-Sass](http://getskeleton.com)
 
 Skeleton-Sass is the (un)official Sass version of [Dave Gamache's](https://twitter.com/dhg) Skeleton Framework. It currently featues a stable version of Skeleton 2.0.4
 
