@@ -44,13 +44,14 @@
 .hero__title {
     text-transform: uppercase;
     font-size: 30px;
-    color: #009b68;
-    letter-spacing: 2px;
+    color: $brand-green;
     font-style: italic;
     margin: 30px auto;
     text-align: center;
     line-height: 1;
-    font-weight: bold;
+    font-weight: 800;
+    letter-spacing: 2px;
+    font-family: 'Rubik', sans-serif;
     @media (#{$bp-larger-than-tablet})  {
         font-size: 66px;
     }
@@ -115,7 +116,7 @@
 
 
 main {
-    max-width: 540px;
+    max-width: 520px;
 }
 aside {
     width: 100%;
