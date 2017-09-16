@@ -57,11 +57,11 @@
     }
 }
 .button--hero {
-    background: $brand-green;
+    background: $brand-red;
     margin-bottom: 15px;
     @include transition;
     &:hover {
-        background: darken($brand-green, 10%);
+        background: darken($brand-red, 10%);
         @include transition;
     }
 }

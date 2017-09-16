@@ -39,6 +39,8 @@ a.open-day__hotspot {
 }
 .open-day__date, .open-day__action {
     width: 40px;
+    flex-direction: column;
+    display: flex;
 }
 .open-day__location {
     padding: 0 10px;

@@ -1,5 +1,6 @@
 function toggleNav(toggleButton, navigation, overlay, body, modal) {
-    toggleButton.on('click', function() {
+    toggleButton.on('click', function(e) {
+        e.stopPropagation();
         if ($(this).hasClass('isOpen')) {
             $(this).removeClass('isOpen');
             navigation.removeClass('isOpen');
@@ -19,7 +20,8 @@ function toggleNav(toggleButton, navigation, overlay, body, modal) {
 
 
 function revealModal(trigger, modal, overlay, body, close, navigation, toggleButton) {
-    trigger.on('click', function() {
+    trigger.on('click', function(e) {
+        e.stopPropagation();
         if (modal.hasClass('isClosed')) {
             if (navigation.hasClass('isOpen')) {
                 navigation.removeClass('isOpen');
@@ -67,4 +69,17 @@ $( document ).ready(function() {
     }
     revealModal(modalTrigger, modal, overlay, body, modalClose, navigation, toggleButton);
     toggleNav(toggleButton, navigation, overlay, body, modal);
+
+        body.on('click', function() {
+            if ($(this).hasClass('overlay-isOpen')) {
+                $(this).removeClass('overlay-isOpen');
+                toggleButton.removeClass('isOpen');
+                navigation.removeClass('isOpen');
+                overlay.removeClass('isOpen');
+                body.removeClass('overlay-isOpen');
+                if (modal.hasClass('isOpen')) {
+                    modal.removeClass('isOpen')
+                }
+            }
+        });
 });

@@ -9,7 +9,7 @@
 }
 
 @mixin button {
-    background-color: $link;
+    background-color: $brand-red;
     color: $white;
     display: inline-block;
     font-family: $font-stack;
@@ -33,6 +33,7 @@
         pointer-events: none;
     }
     &.button--header {
+        background-color: $brand-blue;
         font-size: 15px;
         text-decoration: none;
         padding: 8px 15px;

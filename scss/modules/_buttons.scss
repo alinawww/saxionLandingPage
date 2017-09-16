@@ -12,7 +12,7 @@ button {
   line-height: 1;
   text-decoration: none;
   white-space: nowrap;
-  background-color: $brand-blue;
+  background-color: $brand-red;
   border-radius: $global-radius;
   border: 0;
   cursor: pointer;
@@ -24,6 +24,10 @@ button {
       border-radius: 3px;
       line-height: 1;
       margin-bottom: 0;
+      background-color: $brand-blue;
+      &:hover {
+        background: darken($brand-blue, 10%);
+      }
   }
   @media (#{$bp-larger-than-phablet}) {
       font-size: 20px;
@@ -57,7 +61,7 @@ input {
 .button:hover,
 button:hover {
     color: $white;
-    background-color: darken($brand-blue, 5%);
+    background-color: darken($brand-red, 5%);
     @include transition;
 }
 

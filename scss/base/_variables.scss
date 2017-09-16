@@ -55,14 +55,17 @@ $primary-color: #009b68 !default;
 $charcoal:  #485455;
 $secondary-color: lighten($dark-grey, 13.5%) !default;
 $border-color: #bbb !default;
-$link-color: #1eaedb !default;
+
 $font-color: #222 !default;
 
 // Brand colors
 $brand-blue: #1890b9;
 $brand-yellow: #edc933;
 $brand-green: $primary-color;
+$brand-red: #ce154f;
 
+$link-color: $brand-green !default;
+$link-hover: darken($link-color, 10%) !default;
 
 // Typography
 $font-family: "auto_1_black_smcpregular" !default;
