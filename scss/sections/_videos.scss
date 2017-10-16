@@ -2,13 +2,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 20px;
+    margin-bottom: 90px;
     position: relative;
-    @media (#{$bp-larger-than-tablet}) {
-        margin-top: -90px;
-    }
     @media (#{$bp-larger-than-desktop}) {
-        margin-top: -90px;
         justify-content: space-between;
         flex-direction: row;
     }
